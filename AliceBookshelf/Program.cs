@@ -21,11 +21,11 @@ namespace AliceBookshelf
             ChainedShelf alice = new ChainedShelf(buffer.ToCharArray());
             string solution = alice.Solved();
             Console.WriteLine("Solution: " + solution);
-            
-            //StreamWriter sw = new StreamWriter("output.txt");           
-            //sw.WriteLine(solution);
-            //sw.Close();        
-            //Console.WriteLine($"Also saved to {Directory.GetCurrentDirectory() + @"\output.txt"}");
+
+            StreamWriter sw = new StreamWriter("output.txt");
+            sw.WriteLine(solution);
+            sw.Close();
+            Console.WriteLine($"Also saved to {Directory.GetCurrentDirectory() + @"\output.txt"}");
         }
     }
     public interface IBookshelfItem
